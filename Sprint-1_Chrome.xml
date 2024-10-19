@@ -17,7 +17,7 @@
                 </methods>
             </class>
 
-            <class name="testcases.TC03_CheckOut">
+            <class name="testcases.TC03_Cart">
                 <methods>
                     <include name="VerifyCheckOut"/>
                 </methods>
@@ -33,6 +33,7 @@
             <class name="testcases.TC05_Overview">
                 <methods>
                     <include name="VerifyItemsPrice"/>
+                    <include name="VerifyFinishProcessSuccess"/>
                 </methods>
             </class>
 

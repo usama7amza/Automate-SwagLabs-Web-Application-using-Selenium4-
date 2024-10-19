@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="Login to SwagLabs with valid credientials on Chrome">
-        <parameter name="browsername" value=""/>
-        <classes>
-            <class name="testcases.TC01_Login">
-                <methods>
-                    <include name="loginWithValidUsernameAndPassword"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<suite name="Sprint-1 using Firefox">
     <test verbose="2" preserve-order="true" name="Login to SwagLabs with valid credientials on Firefox">
         <parameter name="browsername" value="firefox"/>
         <classes>
@@ -19,6 +9,35 @@
                     <include name="loginWithValidUsernameAndPassword"/>
                 </methods>
             </class>
+
+            <class name="testcases.TC02_Product">
+                <methods>
+                    <include name="VerifyAddRandomProductsToCart"/>
+                    <include name="VerifyOpenCartPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC03_Cart">
+                <methods>
+                    <include name="VerifyCheckOut"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC04_YourInformation">
+                <methods>
+                    <include name="VerifyFillInfo"/>
+                </methods>
+            </class>
+
+
+            <class name="testcases.TC05_Overview">
+                <methods>
+                    <include name="VerifyItemsPrice"/>
+                    <include name="VerifyFinishProcessSuccess"/>
+                </methods>
+            </class>
+
+
         </classes>
     </test>
 </suite>

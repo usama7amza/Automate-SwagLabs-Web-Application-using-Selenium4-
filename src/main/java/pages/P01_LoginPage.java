@@ -1,5 +1,6 @@
 package pages;
 
+import actions.CustomDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,8 +10,6 @@ public class P01_LoginPage {
     // 1- constructor
     // 2- locators
     // 3- public action methods
-
-    // @FinfBy == driver.findElemnt(By.xpath(""))
 
     // TODO: define web driver
     WebDriver driver;
@@ -26,30 +25,25 @@ public class P01_LoginPage {
     private final By PASSWORD_TEXT= By.xpath("//input[@data-test=\"password\"]");
     private final By LOGIN_BUTTON= By.id("login-button");
 
+
     public P01_LoginPage enterUserName(String username){
-        driver.findElement(this.USERNAME_TEXT).sendKeys(username);
+
+        new CustomDecorator(driver,USERNAME_TEXT,0).sendKeys(username);
         return this;
     }
     public P01_LoginPage enterPassword(String password){
-        driver.findElement(this.PASSWORD_TEXT).sendKeys(password);
+        new CustomDecorator(driver,PASSWORD_TEXT,1000).sendKeys(password);
+
         return this;
     }
     public P01_LoginPage clickLoginButton(){
-        driver.findElement(this.LOGIN_BUTTON).click();
+        new CustomDecorator(driver,LOGIN_BUTTON,4000).click();
+
         return this;
     }
-
-    public String getHeaderTest(){
-        return driver.findElement(By.xpath("")).getText();
+    public String GetCurrentURL()
+    {
+        return driver.getCurrentUrl();
     }
-
-//    // TODO: define public action methods
-//    public void login(String username, String password){
-//        driver.findElement(this.USERNAME_TEXT).sendKeys(username);
-//        driver.findElement(this.PASSWORD_TEXT).sendKeys(password);
-//        driver.findElement(this.LOGIN_BUTTON).click();
-//    }
-
-
 
 }
