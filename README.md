@@ -53,7 +53,7 @@ The test environment for automation testing is as follows:
 To set up the SwagLabs application locally, follow these steps:
 
 1. Clone the repository:
-*   git clone https://github.com/AhmedAbdelkawy-hub/SwagLabs.git
+*   git clone https://github.com/usama7amza/SwagLabs.git
 2. Navigate to the project directory:
 *   cd SwagLabs
 3. Install dependencies:
